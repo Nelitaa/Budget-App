@@ -1,0 +1,2 @@
+class GroupMovement < ApplicationRecord
+end
