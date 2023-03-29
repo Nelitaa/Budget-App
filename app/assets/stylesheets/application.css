@@ -1,15 +1,126 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+:root {
+  --color-primary: #3778c2;
+  --color-secondary: #5fb523;
+  --color-dark: #434b54;
+  --text-color: #262729;
+  --links-color: #e8eae9;
+  --background-color: #f1f3f2;
+  --main-font: 'Proxima Nova', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: var(--color-primary);
+  width: max-content;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 10%;
+  margin: 10%;
+  box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+  cursor: pointer;
+}
+
+h1 {
+  display: flex;
+  color: #fff;
+  text-shadow: 10px 10px 14px rgba(0, 0, 0, 0.47);
+}
+
+h2 {
+  display: flex;
+  color: #fff;
+  font-size: large;
+}
+
+.splash {
+  justify-content: center;
+  background-color: var(--color-primary);
+}
+
+.splash h1 {
+  align-self: center;
+  font-size: 3em;
+}
+
+.splash div {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.splash button {
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 5%;
+  background-color: var(--color-primary);
+}
+
+form {
+  background-color: var(--background-color);
+}
+
+form input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-bottom: 1px solid var(--links-color);
+  border-top: 1px solid var(--links-color);
+  padding: 5%;
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 5%;
+}
+
+.links a {
+  color: var(--color-dark);
+} 
+
+.actions input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
