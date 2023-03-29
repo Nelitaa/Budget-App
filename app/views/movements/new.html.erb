@@ -1,0 +1,8 @@
+<h1>New Movement</h1>
+
+<%= form_with model: @movement, url: group_movements_path, local: true do |f| %>
+  <%= f.text_field :name, autofocus: true, placeholder: "Name" %>
+  <%= f.number_field :amount, autofocus: true, placeholder: "Amount" %>
+  <%= f.collection_select(:group_ids, current_user.groups, :id, :name, {}, multiple: true) %>
+  <%= f.submit "Create" %>
+<% end %>

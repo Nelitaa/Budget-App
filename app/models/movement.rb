@@ -1,6 +1,6 @@
 class Movement < ApplicationRecord
-  has_many :group_expenses, dependent: :destroy
-  has_many :groups, through: :group_expenses
+  has_many :group_movements, dependent: :destroy
+  has_many :groups, through: :group_movements
   belongs_to :user, class_name: 'User', foreign_key: 'user_id'
 
   validates :name, presence: true

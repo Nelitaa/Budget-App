@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
   has_many :groups, class_name: 'Group', dependent: :destroy, foreign_key: 'user_id'
-  has_many :expenses, class_name: 'Expense', dependent: :destroy, foreign_key: 'user_id'
+  has_many :movements, class_name: 'Movement', dependent: :destroy, foreign_key: 'user_id'
 
   validates :name, presence: true
 end

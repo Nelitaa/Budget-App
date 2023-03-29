@@ -20,6 +20,14 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.find(params[:id])
+    if @group.user == current_user
+      @movements = @group.movements.order(created_at: :desc)
+      @total = @movements.sum(:amount)
+    end
+  end
+
   private
 
   def set_user
