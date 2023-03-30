@@ -1,15 +1,27 @@
-<h1>Categories</h1>
+<div class="splash header">
+  <%= image_tag("menu.png", alt: "Menu icon") %>
+  <h2>CATEGORIES</h2>
+  <%= image_tag("search.png", alt: "Search icon") %>
+</div>
 
 <ul>
   <% @groups.each do |group| %>
-    <li>
+    <li class="group">
       <%= link_to group_path(group) do %>
-        <%= image_tag group.try(:icon) || 'https://media.istockphoto.com/id/1301556364/es/vector/dibujo-de-la-se%C3%B1al-de-tr%C3%A1fico-del-sitio-de-construcci%C3%B3n.jpg?s=1024x1024&w=is&k=20&c=ZL3IqA1wQmMDiFcG4PLYKIaX7VtklqkBpTYdStY7Geo=' %>
+        <% if group.icon.present? %>
+          <%= image_tag group.icon %>
+        <% else %>
+          <%= image_tag asset_path('under-construction.jpeg') %>
+        <% end %>
         <h2><%= group.name %></h2>
-        <p><%= group.movements.sum(:amount) %></p>
+        <p>$<%= group.movements.sum(:amount) %></p>
       <% end %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Category", new_group_path %>
+<%= link_to new_group_path do %>
+  <div class="green-button2">
+    <div>NEW CATEGORY</div>
+  </div>
+<% end %>

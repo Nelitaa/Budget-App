@@ -124,3 +124,86 @@ form input {
   color: #fff;
   cursor: pointer;
 }
+
+.group-transaction,
+.group a {
+  background-color: #fff;
+  margin: 5%;
+  padding: 5%;
+  column-gap: 5%;
+}
+
+.group-transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-transaction img,
+.group img {
+  width: 100px;
+  height: 100px;
+}
+
+.group-transaction h2,
+.group h2 {
+  width: 150px;
+  color: var(--color-dark);
+}
+
+.group-transaction p,
+.group p {
+  color: #787878;
+  width: 70px;
+  text-align: end;
+}
+
+.green-button2, 
+.green-button {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-secondary);
+  padding: 5%;
+  cursor: pointer;
+  width: auto;
+}
+
+.green-button2 {
+  width: 100vw;
+}
+
+.green-button input,
+.green-button2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--links-color);
+  width: auto;
+  padding: 5%;
+  color: #fff;
+  background-color: var(--color-secondary);
+}
+
+.select-category {
+  display: flex;
+  background-color: #fff;
+  padding: 5%;
+  column-gap: 5%;
+}
+
+.select-category select {
+  border: 1px solid var(--links-color);
+}
+
+.select-category option {
+  display: flex;
+  width: 150px;
+  padding: 3%;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5%;
+}
