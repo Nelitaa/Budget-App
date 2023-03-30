@@ -9,7 +9,7 @@ class MovementsController < ApplicationController
     @movement.user = current_user
 
     if @movement.save
-      flash[:notice] = 'Expense created successfully!.'
+      flash[:notice] = 'Transaction created successfully!.'
       redirect_to @group
     else
       flash[:alert] = @movement.errors.full_messages.first if @movement.errors.any?
