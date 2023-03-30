@@ -116,7 +116,7 @@ form input {
 
 .links a {
   color: var(--color-dark);
-} 
+}
 
 .actions input {
   background-color: transparent;
@@ -158,7 +158,7 @@ form input {
   text-align: end;
 }
 
-.green-button2, 
+.green-button2,
 .green-button {
   display: flex;
   flex-direction: column;

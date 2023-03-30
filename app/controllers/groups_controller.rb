@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_user
-  
+
   def index
     @groups = @user.groups.all
   end
@@ -22,10 +22,10 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    if @group.user == current_user
-      @movements = @group.movements.order(created_at: :desc)
-      @total = @movements.sum(:amount)
-    end
+    return unless @group.user == current_user
+
+    @movements = @group.movements.order(created_at: :desc)
+    @total = @movements.sum(:amount)
   end
 
   private
