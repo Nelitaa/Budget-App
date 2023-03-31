@@ -4,5 +4,5 @@ class Group < ApplicationRecord
   belongs_to :user, class_name: 'User', foreign_key: 'user_id'
 
   validates :name, presence: true
-  validates :icon, presence: true, format: { with: URI.regexp }, if: -> { icon.present? } 
+  validates :icon, presence: true, format: { with: URI::DEFAULT_PARSER.make_regexp }, if: -> { icon.present? }
 end

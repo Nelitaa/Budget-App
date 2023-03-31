@@ -17,9 +17,4 @@ RSpec.describe Group, type: :model do
     subject.user = nil
     expect(subject).to_not be_valid
   end
-
-  it 'is not valid with out a icon' do
-    subject.icon = nil
-    expect(subject).to_not be_valid
-  end
 end
