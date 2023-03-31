@@ -18,6 +18,19 @@
 
 body {
   background-color: var(--background-color);
+  height: 100vh;
+}
+
+html {
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+}
+
+.sub-container {
+  height: 71vh;
 }
 
 ul {
