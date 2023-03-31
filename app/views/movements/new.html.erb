@@ -1,0 +1,20 @@
+<div class="splash header">
+  <%= link_to group_path(@group) do %>
+    <%= image_tag("arrow-back.png", alt: "Arrow back icon") %>
+  <% end %>
+  <h2>NEW TRANSACTION</h2>
+  <%= image_tag("search.png", alt: "Search icon") %>
+</div>
+
+<%= form_with model: @movement, url: group_movements_path, local: true do |f| %>
+  <%= f.text_field :name, autofocus: true, placeholder: "Name" %>
+  <%= f.number_field :amount, autofocus: true, placeholder: "Amount" %>
+  <div class="select-category">
+    <%= f.label :group_ids, "Select Category: " %>
+    <%= f.collection_select(:group_ids, current_user.groups, :id, :name, { include_blank: true }, multiple: true) %>
+  </div>
+  <br>
+  <div class="green-button">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

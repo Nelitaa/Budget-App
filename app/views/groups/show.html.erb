@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="splash header">
+    <%= link_to root_path do %>
+      <%= image_tag("arrow-back.png", alt: "Arrow back icon") %>
+    <% end %>
+      <h2>TRANSACTIONS</h2>
+    <%= image_tag("search.png", alt: "Search icon") %>
+  </div>
+
+  <div class="total">
+    <h3>Total:</h3>
+    $<%= number_with_precision(@movements.sum(:amount), precision: 2) %>
+  </div>
+
+  <ul class="sub-container">
+    <% @movements.each do |movement| %>
+        <li class="group-transaction">
+          <%= image_tag @group.icon %>
+          <p><%= movement.name %></p>
+          <h2>$<%= movement.amount %></h2>
+        </li>
+    <% end %>
+  </ul>
+
+
+  <%= link_to new_group_movement_path(group_id: @group.id) do %>
+    <div class="green-button2">
+      <div>NEW TRANSACTION</div>
+    </div>
+  <% end %>
+</div>

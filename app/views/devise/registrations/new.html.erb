@@ -1,0 +1,18 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="splash header">
+    <%= image_tag("arrow-back.png", alt: "Arrow back icon") %>
+    <h2>SIGN UP</h2>
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  </div>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name" %>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password" %>
+<% end %>
+
+<div class="links">
+  <%= render "devise/shared/links" %>
+</div>

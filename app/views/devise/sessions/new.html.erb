@@ -1,0 +1,15 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="splash header">
+    <%= image_tag("arrow-back.png", alt: "Arrow back icon") %>
+    <h2>LOG IN</h2>
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+  </div>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+<% end %>
+
+<div class="links">
+  <%= render "devise/shared/links" %>
+</div>

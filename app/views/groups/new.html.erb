@@ -1,0 +1,16 @@
+<div class="splash header">
+  <%= link_to root_path do %>
+    <%= image_tag("arrow-back.png", alt: "Arrow back icon") %>
+  <% end %>
+  <h2>NEW CATEGORY</h2>
+  <%= image_tag("search.png", alt: "Search icon") %>
+</div>
+
+<%= form_with model: @group, url: groups_path, local: true do |f| %>
+  <%= f.text_field :name, autofocus: true, placeholder: "Name" %>
+  <%= f.text_field :icon, placeholder: "Icon Link" %>
+  <br>
+  <div class="green-button">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
