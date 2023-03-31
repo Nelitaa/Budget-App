@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :movements, class_name: 'Movement', dependent: :destroy, foreign_key: 'user_id'
 
   validates :name, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
 end

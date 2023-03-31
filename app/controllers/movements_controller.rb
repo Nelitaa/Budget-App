@@ -1,6 +1,7 @@
 class MovementsController < ApplicationController
   def new
     @movement = Movement.new
+    @group = Group.find(params[:group_id])
   end
 
   def create
