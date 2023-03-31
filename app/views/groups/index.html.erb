@@ -18,7 +18,12 @@
           <% else %>
             <%= image_tag asset_path('under-construction.jpeg') %>
           <% end %>
-          <p><%= group.name %></p>
+          <div>
+            <p><%= group.name %></p>
+            <hr>
+            <br>
+            <p><%= group.created_at.strftime("%d-%m-%Y") %></p>
+          </div>
           <h2>$<%= group.movements.sum(:amount) %></h2>
         <% end %>
       </li>

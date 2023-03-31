@@ -160,15 +160,15 @@ form input {
 
 .group-transaction h2,
 .group h2 {
-  width: 150px;
+  width: 70px;
+  text-align: end;
   color: var(--color-dark);
 }
 
 .group-transaction p,
 .group p {
   color: #787878;
-  width: 70px;
-  text-align: end;
+  width: 150px;
 }
 
 .green-button2,
@@ -219,4 +219,8 @@ form input {
   justify-content: space-between;
   background-color: #fff;
   padding: 5%;
+}
+
+hr {
+  border: 1px solid var(--color-dark);
 }
